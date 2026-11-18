@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Blog</title>
   <style>
+    
    :root{
      --cor-primaria: #183C63;
      --cor-secundaria: #3782d2;
@@ -17,7 +18,7 @@
      --fonte-texto: 'Segoe UI', sans-serif;
 
    }
-
+    
    .tema-escuro {
     --cor-primaria: #e9e3ff;
      --cor-secundaria: #99caff;
@@ -89,14 +90,14 @@
       font-size: 32px;
       padding: 12px;
       background-color: var(--cor-primaria);
-      border-radius: 50%;
+      border-radius: 40%;
     }
-  
+    
   </style>
 
 </head>
 
-<body class="tema-escuro">
+<body>
   <header>
     <h1>Meu Blog Tech</h1>
     <p>Vou Compartilhar conhecimentos sobre
@@ -223,9 +224,10 @@
      <button>👍​ <span>0</span></button>
    </div>
 
+   </article>
+   
    <button class="btn-tema-escuro">🌓</button>
-
-    </article>
+  
   </main>
 </body>
 <script>
@@ -247,12 +249,13 @@
     }
   })
   
-const btnTemaEscuro = document.querySelector("btn-tema-escuro");
+  const btnTemaEscuro = document.querySelector(".btn-tema-escuro");
 
 btnTemaEscuro.addEventListener("click", mudaTema);
 
 function mudaTema() {
   const corpoPagina = document.body;
+
   if (corpoPagina.classList.contains("tema-escuro")) {
     corpoPagina.classList.remove("tema-escuro");
   } else {
